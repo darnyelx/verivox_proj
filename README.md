@@ -16,6 +16,10 @@ Before using these commands, ensure that you have the following dependencies ins
 
 ## Usage
 
+## API DOCS
+
+http://localhost:3000/api-docs/
+
 ### Build Docker Image
 
 Build a Docker image for the Verivox project using the following command:
@@ -74,7 +78,8 @@ If you'd like to contribute to this project, please fork the repository, create 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+
+
+
 ---
 
-##API DOCS
-http://localhost:3000/api-docs/
