@@ -1,6 +1,6 @@
 import { ProductInterface } from "../../Interfaces/ProductInterface";
 import { TariffServiceInterface } from "../../Interfaces/TariffServiceInterface";
-import * as verivoxTarriffs from "../../verivoxTariffs.json"
+import  verivoxTarriffs from "../../verivoxTariffs"
 import { Product } from "../Product";
 
 export class VerivoxProvider implements TariffServiceInterface {

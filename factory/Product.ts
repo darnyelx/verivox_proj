@@ -46,7 +46,7 @@ export class Product implements ProductInterface {
     }
     
     calculateCostForProductA(consumption: number): number {
-        return this.baseCost * 12 + consumption * this.additionalKwhCost;
+        return this.baseCost * 12 + consumption * (this.additionalKwhCost/100);
     }
     
     calculateCostForProductB(consumption: number): number {
@@ -54,7 +54,7 @@ export class Product implements ProductInterface {
             if (consumption <= this.includedKwh) {
                 return this.baseCost;
             } else {
-                return this.baseCost + (consumption - this.includedKwh) * this.additionalKwhCost;
+                return this.baseCost + (consumption - this.includedKwh) * (this.additionalKwhCost/100);
             }
         } else {
             return 0; // Handle the case where includedKwh is not defined for Product B

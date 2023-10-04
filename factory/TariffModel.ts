@@ -4,9 +4,11 @@ import { TariffServiceInterface } from "../Interfaces/TariffServiceInterface";
 
 export class TariffModel implements TarriffProviderInterface{
     private products: Array<ProductInterface> = [];
+    
     constructor(service: TariffServiceInterface){
         this.load(service);
     }
+    
     load (service: TariffServiceInterface){
        this.products =  service.get()
     };
@@ -19,10 +21,14 @@ export class TariffModel implements TarriffProviderInterface{
         return sortedArray.map((product, id: number)=>{
             return {
                 tariff_name: product.name,
-                annual_cost: product.getConsumption() + `${product.getCurrency()}/year`,
-                id
+                annual_cost: product.getConsumption() + ` ${product.getCurrency()}/year`,
+                id: id+1
             }
         })
+    }
+
+    getProducts (){
+        return this.products;
     }
 
     sort(products: Array<ProductInterface>){

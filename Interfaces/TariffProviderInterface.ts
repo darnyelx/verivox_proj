@@ -1,3 +1,4 @@
+import { ProductInterface } from "./ProductInterface";
 import { TariffServiceInterface } from "./TariffServiceInterface";
 
 export interface ComparedResultInterface {
@@ -9,5 +10,6 @@ export interface ComparedResultInterface {
 export interface TarriffProviderInterface {
     load: (service: TariffServiceInterface) => void;
     compare: (consumption: number) => Array<ComparedResultInterface>
+    getProducts: () => Array<ProductInterface>
 }
 
