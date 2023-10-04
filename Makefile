@@ -2,8 +2,9 @@
 IMAGE_NAME := verivox_proj
 PORT := 3000
 
-start:
-	npm run dev
+
+run-test:
+	npx jest
 
 # Build Docker image
 build:

@@ -1,10 +1,9 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import swaggerUi from 'swagger-ui-express';
-import swaggerSpec from './swaggerConfig'; // Import the Swagger configuration
+import swaggerSpec from './swaggerConfig'; 
 import productRoutes from './routes/tariffRoutes';
 
 const app: Application = express();
-
 // Middleware for JSON request bodies
 app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));

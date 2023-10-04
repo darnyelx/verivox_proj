@@ -7,9 +7,9 @@ const options: Options = {
   swaggerDefinition:{
     openapi: '3.0.0',
     info:{
-        title: 'Verixon Tariff Service',
+        title: 'Verivox Tariff Service',
         version: '1.0.0',
-        description: 'Documentation for Verixon Tariff Service',
+        description: 'Documentation for Verivox Tariff Service',
     }
   },
   apis: ['./routes/*.ts'], // Path to the API route files in TypeScript
